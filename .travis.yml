@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.5.0
+before_install: gem install bundler -v 2.0.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: fwwNZeR7WEsj7PpHq7RGiKRBxpM4PI0Ad1G63JMAd5u8ktxfkjFyRF3+xBaEK148VeabIUKbPSUGm9AFwXr6fZVZ1s8frwch0tSqLltGxAlrWkloIFVsGSs3nrwbqsq1FZn6OSivygtLOkNQrKr7NXx/eQFakADmVJ7Qkx63QnVOyyyITwp6iF5k7b9rkWwuVqC7BIyr9oAvMezfFxb2F/5w8gWCSeN1THbbjuvv6YyLKWacEgWrzyWitjFlyF10qGZYqlC1UdY50rhQILjOFGWMx4XXfQmF5mGJKlA48dLFTv2qUjxy1tiEF+M4i8QRcG6DjNNiKd6Dsnd87GsgLeJ/EmBi5+Fzg4vKQXdvIL/MI33VX+uHGHunLsCzYQI7EPc54dFQFr563LYvKbRZ9SK7Vr84tWdyM0FeS37+tAtzFC7W2yzyPUrJXzPilhIpFeyAm6wdJemoOWZLYYk8RA7e6RvI2CD+aF0nlUtxW1YOKOBgC5GQccy8FvsesemDmOmAVvzReO6POYcBQRuBhHRvzccelLf/2yGLcRGQ8UamNR5ds+SY0zNFKZB7hTJLc712de0naGjQjBWcrvXPHqObyk+lFYgiU4ia6iJ3N00/K6eTX7txqxsXuJ/8AOHo6XQ9ePlbzjF8XDxLafN5ggwwJuYdAl3x4LV869gTj+I=
+    app: api-penpal-boost
+    on:
+      repo: Not-Zorro/penpal_api
