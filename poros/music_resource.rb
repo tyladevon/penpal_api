@@ -6,10 +6,7 @@ class MusicResource
   end
 
   def get_music(music_pref)
-    @song || = begin
-      service = SpotifyService.new
-      service.get_song(music_pref.sample)
-    end
+    @song ||= SpotifyService.get_song(music_pref.sample)
   end
 
 end
