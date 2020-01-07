@@ -1,5 +1,6 @@
 require 'sinatra'
 
-get '/boost' do
+get '/api/v1/suggestion' do
   
+
 end
