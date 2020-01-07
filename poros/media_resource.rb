@@ -1,8 +1,12 @@
 class MediaResource
 
-  def get_photo
-    decision = MediaDecision.new
-    decision.get_type
+  def initialize(user_info)
+    @type = 'media'
+    @data = { url: get_media(user_info[:media_preferences]) }
+  end
+
+  def get_media(media_pref)
+    PexelService.get_photo(media_pref.sample)
   end
 
 

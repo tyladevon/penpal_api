@@ -1,4 +1,6 @@
 class JournalResource
-  def initialize
+  def initialize(user_info)
+    @type = 'journal'
+    @data = nil
   end
 end
