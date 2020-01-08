@@ -2,7 +2,10 @@ class MusicResource
 
   def initialize(user_info)
     @type = 'music'
-    @data = { url: get_music(user_info[:music_preferences])[:song_url], song_name: get_music(user_info[:music_preferences])[:song_name]  }
+    @data = { url: get_music(user_info[:music_preferences])[:song_url],
+              song_name: get_music(user_info[:music_preferences])[:song_name],
+              artist_name: get_music(user_info[:music_preferences])[:artist_name],
+              image: get_music(user_info[:music_preferences])[:image] }
   end
 
   def get_music(music_pref)
