@@ -1,4 +1,7 @@
+require './services/spotify_service'
+
 class MusicResource
+  attr_reader :type, :data
 
   def initialize(user_info)
     @type = 'music'

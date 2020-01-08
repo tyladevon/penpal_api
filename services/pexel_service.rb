@@ -1,4 +1,8 @@
 require 'faraday'
+require 'figaro'
+require 'dotenv'
+
+Dotenv.load
 
 class PexelService
   def self.get_photo(pref)
@@ -10,7 +14,7 @@ class PexelService
     def self.connection(pref)
       Faraday.new(url: 'https://api.pexels.com/v1/search?') do |f|
         f.params[:query] = pref
-        f.headers[:Authorization] = '563492ad6f917000010000017946788e05ac45fca7d0980652b59263'
+        f.headers[:Authorization] = ENV['PEXEL_API_KEY']
         f.adapter Faraday.default_adapter
       end
     end

@@ -1,6 +1,9 @@
 require 'sinatra'
+require "sinatra/base"
+require 'json'
 
 get '/api/v1/suggestion' do
-  resource = DecisionMaker.get_suggestion(user_info)
-  render json: Object.const_get(resource.type.capitalize).to_json
+  json = JSON.parse(params['user_info'], symbolize_names: true)
+  resource = DecisionMaker.get_suggestion(json)
+  { type: resource.type, data: resource.data }.to_json
 end

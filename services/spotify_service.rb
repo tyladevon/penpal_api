@@ -1,4 +1,5 @@
 require 'faraday'
+require 'figaro'
 
 class SpotifyService
   def self.get_song(pref, token)
