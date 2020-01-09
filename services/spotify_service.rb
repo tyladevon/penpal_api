@@ -1,5 +1,4 @@
 require 'faraday'
-require 'figaro'
 
 
 class SpotifyService

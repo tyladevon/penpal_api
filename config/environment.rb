@@ -1,5 +1,4 @@
 require 'bundler'
-require 'figaro'
 Bundler.require
 
 # get the path of the root of the app

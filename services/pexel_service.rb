@@ -1,5 +1,4 @@
 require 'faraday'
-require 'figaro'
 require 'dotenv'
 Dotenv.load
 
