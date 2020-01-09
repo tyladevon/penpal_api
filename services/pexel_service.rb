@@ -5,8 +5,9 @@ Dotenv.load
 
 class PexelService
   def self.get_photo(pref)
-    self.get_json(pref)[:photos].sample[:url]
+    self.get_json(pref)[:photos].sample[:src][:original]
   end
+
 
   private
 

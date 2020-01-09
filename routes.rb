@@ -1,4 +1,5 @@
 require 'sinatra'
+require './poros/decision_maker'
 require "sinatra/base"
 require 'json'
 
