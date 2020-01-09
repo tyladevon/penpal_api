@@ -5,6 +5,7 @@ class MusicResource
 
   def initialize(user_info)
     @type = 'music'
+    @token = user_info[:spotify_token]
     @data = { url: get_music(user_info[:music_preferences])[:song_url],
               song_name: get_music(user_info[:music_preferences])[:song_name],
               artist_name: get_music(user_info[:music_preferences])[:artist_name],
@@ -12,7 +13,7 @@ class MusicResource
   end
 
   def get_music(music_pref)
-    @song ||= SpotifyService.get_song(music_pref.sample)
+    @song ||= SpotifyService.get_song(music_pref.sample, @token) 
   end
 
 end

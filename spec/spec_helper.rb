@@ -25,4 +25,5 @@ VCR.configure do |config|
   # config.default_cassette_options = { :match_requests_on => [:method,
   #   VCR.request_matchers.uri_without_param(:access_token, :apikey)] }
   config.filter_sensitive_data("<PEXEL_API_KEY>") { ENV['PEXEL_API_KEY'] }
+  config.filter_sensitive_data("<SPOTIFY_ACCESS_TOKEN>") { ENV['SPOTIFY_ACCESS_TOKEN'] }
 end

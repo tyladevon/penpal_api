@@ -1,9 +1,10 @@
 require 'faraday'
 require 'figaro'
 
+
 class SpotifyService
   def self.get_song(pref, token)
-    json = elf.get_json(pref, token)
+    json = self.get_json(pref, token)
     { song_name: json[:tracks][0][:name],
       artist_name: json[:tracks][0][:artists][0][:name],
       song_url: json[:tracks][0][:external_urls][:spotify],
