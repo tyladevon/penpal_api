@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/recommendations?limit=1&seed_genres=rock
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <SPOTIFY_ACCESS_TOKEN>
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version,
+        X-Cloud-Trace-Context
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Date:
+      - Thu, 09 Jan 2020 00:15:47 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "tracks" : [ {
+            "album" : {
+              "album_type" : "ALBUM",
+              "artists" : [ {
+                "external_urls" : {
+                  "spotify" : "https://open.spotify.com/artist/568ZhdwyaiCyOGJRtNYhWf"
+                },
+                "href" : "https://api.spotify.com/v1/artists/568ZhdwyaiCyOGJRtNYhWf",
+                "id" : "568ZhdwyaiCyOGJRtNYhWf",
+                "name" : "Deep Purple",
+                "type" : "artist",
+                "uri" : "spotify:artist:568ZhdwyaiCyOGJRtNYhWf"
+              } ],
+              "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+              "external_urls" : {
+                "spotify" : "https://open.spotify.com/album/32NQ56VZDTXSH3SMv4XSGN"
+              },
+              "href" : "https://api.spotify.com/v1/albums/32NQ56VZDTXSH3SMv4XSGN",
+              "id" : "32NQ56VZDTXSH3SMv4XSGN",
+              "images" : [ {
+                "height" : 640,
+                "url" : "https://i.scdn.co/image/376c0eda7f1fa74bd2d9ab0bf7baed8f9f43f66b",
+                "width" : 640
+              }, {
+                "height" : 300,
+                "url" : "https://i.scdn.co/image/79cf6aa6bce60d69b92dc7c8238e1e321e373862",
+                "width" : 300
+              }, {
+                "height" : 64,
+                "url" : "https://i.scdn.co/image/07f1daf5ee8eff899b34dd6e69142c81595ff439",
+                "width" : 64
+              } ],
+              "name" : "Machine Head (Remastered)",
+              "release_date" : "1972-03-25",
+              "release_date_precision" : "day",
+              "total_tracks" : 0,
+              "type" : "album",
+              "uri" : "spotify:album:32NQ56VZDTXSH3SMv4XSGN"
+            },
+            "artists" : [ {
+              "external_urls" : {
+                "spotify" : "https://open.spotify.com/artist/568ZhdwyaiCyOGJRtNYhWf"
+              },
+              "href" : "https://api.spotify.com/v1/artists/568ZhdwyaiCyOGJRtNYhWf",
+              "id" : "568ZhdwyaiCyOGJRtNYhWf",
+              "name" : "Deep Purple",
+              "type" : "artist",
+              "uri" : "spotify:artist:568ZhdwyaiCyOGJRtNYhWf"
+            } ],
+            "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "UY", "VN", "ZA" ],
+            "disc_number" : 1,
+            "duration_ms" : 366136,
+            "explicit" : false,
+            "external_ids" : {
+              "isrc" : "GBDXG1200002"
+            },
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/track/3uMmllZo1AfoEnVT4ENCD3"
+            },
+            "href" : "https://api.spotify.com/v1/tracks/3uMmllZo1AfoEnVT4ENCD3",
+            "id" : "3uMmllZo1AfoEnVT4ENCD3",
+            "is_local" : false,
+            "name" : "Highway Star - Remastered 2012",
+            "popularity" : 68,
+            "preview_url" : null,
+            "track_number" : 1,
+            "type" : "track",
+            "uri" : "spotify:track:3uMmllZo1AfoEnVT4ENCD3"
+          } ],
+          "seeds" : [ {
+            "initialPoolSize" : 995,
+            "afterFilteringSize" : 995,
+            "afterRelinkingSize" : 995,
+            "id" : "rock",
+            "type" : "GENRE",
+            "href" : null
+          } ]
+        }
+    http_version: 
+  recorded_at: Thu, 09 Jan 2020 00:14:48 GMT
+recorded_with: VCR 5.0.0
